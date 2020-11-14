@@ -46,16 +46,18 @@ class _HomePageState extends State<HomePage> {
         title: Text("ML KIT FACE CHECKER"),
       ),
       body: Center(
-        child: ListView.builder(
-          itemCount: _images.length,
-          itemBuilder: (context, index) {
-            return _ItemCell(
-              image: _images[index],
-              checkCondition: _conditions[index],
-              checkImage: () => checkImage(index),
-            );
-          },
-        ),
+        child: (_images.length == 0)
+            ? Text("ボタンで写真を追加してください")
+            : ListView.builder(
+                itemCount: _images.length,
+                itemBuilder: (context, index) {
+                  return _ItemCell(
+                    image: _images[index],
+                    checkCondition: _conditions[index],
+                    checkImage: () => checkImage(index),
+                  );
+                },
+              ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _pickImage,

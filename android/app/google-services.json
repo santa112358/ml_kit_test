@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:896276840664:android:fa25e44f36db5556a817ad",
         "android_client_info": {
-          "package_name": "com.example.instagram_mock"
+          "package_name": "com.example.ml_kit_test"
         }
       },
       "oauth_client": [

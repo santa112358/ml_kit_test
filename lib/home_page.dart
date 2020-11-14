@@ -138,6 +138,5 @@ class _ItemCell extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }

@@ -1,4 +1,4 @@
-package com.example.instagram_mock
+package com.example.ml_kit_test
 
 import io.flutter.embedding.android.FlutterActivity
 

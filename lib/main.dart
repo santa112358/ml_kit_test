@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:instagram_mock/home_page.dart';
+import 'package:ml_kit_test/home_page.dart';
 
 void main() {
   runApp(MyApp());

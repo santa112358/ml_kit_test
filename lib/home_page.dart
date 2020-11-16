@@ -14,7 +14,7 @@ extension ButtonText on CheckCondition {
   String get text {
     switch (this) {
       case CheckCondition.notChecked:
-        return "認証する";
+        return "未認証";
       case CheckCondition.hasFace:
         return "顔あり";
       case CheckCondition.noFace:
@@ -33,6 +33,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   List<File> _images = [];
   List<CheckCondition> _conditions = [];
+  FaceDetector faceDetector;
 
   @override
   void initState() {
@@ -124,7 +125,7 @@ class _ItemCell extends StatelessWidget {
           const SizedBox(
             width: 16,
           ),
-          Text(checkCondition.text),
+          Text("状態: ${checkCondition.text}"),
           const Spacer(),
           RaisedButton(
             onPressed: () {
